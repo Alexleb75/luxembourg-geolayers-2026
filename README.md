@@ -1,15 +1,28 @@
 # luxembourg-geolayers-2026
 
-Couches GeoJSON du Luxembourg pour le plugin **GEOlayers 3** (After Effects).
+Couches GeoJSON du Luxembourg pour **GEOlayers 3** (After Effects), organisées par géographie.
 
-À utiliser via une source **GitHub Repo** dans GeoLayers (URL nue de ce repo, branche `main`).
+**Utilisation** : dans GeoLayers → Feature Search → source **GitHub Repo** → URL nue de ce repo, branche `main`.
+La recherche se fait **par nom de fichier** ; le chemin du dossier s'affiche comme contexte.
 
-| Fichier | Contenu | Géométrie |
-|---|---|---|
-| `luxembourg-communes.geojson` | 105 communes | polygones |
-| `luxembourg-cantons.geojson` | 12 cantons | polygones |
-| `luxembourg-lieux-dits.geojson` | lieux-dits | points |
-| `luxembourg-parcs.geojson` | parcs & réserves (avec délimitations) | polygones |
+## Structure (1 fichier = 1 entité)
+```
+District <D>/
+  District <D>.geojson
+  Canton <C>/
+    Canton <C>.geojson
+    <Commune>/
+      <Commune>.geojson
+      Parcs/       <parc>.geojson        (ex. Kinnekswiss)
+      Quartiers/   <quartier>.geojson    (délimitation OSM, sinon point)
+      Lieux-dits/  <lieu-dit>.geojson
+      Monuments/   <monument>.geojson
+```
+Districts historiques (supprimés en 2015, gardés comme niveau racine) : Luxembourg, Diekirch, Grevenmacher.
 
-Sources : communes/cantons repris de [click_that_hood](https://github.com/codeforgermany/click_that_hood) ;
-lieux-dits & parcs dérivés d'OpenStreetMap. Propriété de nom : `name`.
+## Agrégats (racine) — pour charger une couche entière d'un coup
+`luxembourg-communes/-cantons/-districts/-parcs/-quartiers/-lieux-dits/-monuments.geojson`
+
+## Sources
+Communes/cantons : [click_that_hood](https://github.com/codeforgermany/click_that_hood).
+Parcs, quartiers, lieux-dits, monuments : OpenStreetMap. Propriété de nom : `name`.

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Parc Aloyse Weber", "kind": "park"}, "geometry": {"type": "Polygon", "coordinates": [[[6.1310893, 49.5406347], [6.1311103, 49.5405635], [6.1314245, 49.5406056], [6.1316284, 49.5405864], [6.1315259, 49.5407507], [6.1310893, 49.5406347]]]}}]}
