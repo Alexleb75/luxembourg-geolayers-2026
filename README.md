@@ -14,14 +14,14 @@ District <D>/
     <Commune>/
       <Commune>.geojson
       Parcs/       <parc>.geojson        (ex. Kinnekswiss)
-      Quartiers/   <quartier>.geojson    (délimitation OSM, sinon point)
+      Quartiers/   <quartier>.geojson    (Luxembourg-Ville uniquement)
       Lieux-dits/  <lieu-dit>.geojson
       Monuments/   <monument>.geojson
 ```
 Districts historiques (supprimés en 2015, gardés comme niveau racine) : Luxembourg, Diekirch, Grevenmacher.
 
 ## Agrégats (racine) — pour charger une couche entière d'un coup
-`luxembourg-communes/-cantons/-districts/-parcs/-quartiers/-lieux-dits/-monuments.geojson`
+`luxembourg-communes/-cantons/-districts/-parcs/-ville-quartiers/-lieux-dits/-monuments.geojson`
 
 ## Sources
 Communes/cantons : [click_that_hood](https://github.com/codeforgermany/click_that_hood).
